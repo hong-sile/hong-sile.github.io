@@ -13,7 +13,7 @@ layout: page
 {% assign sort_categories = site.categories | sort %}
 
 {% for category in sort_categories %}
-  {% assign category_name = category | first %}
+  {% assign category_name = category | first | replace: '_', ' ' %}
   {% assign posts_of_category = category | last %}
   {% assign first_post = posts_of_category | first %}
 
