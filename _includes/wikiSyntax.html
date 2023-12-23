@@ -1,0 +1,8 @@
+<script>
+    ;(function() {
+		var content = document.querySelector('#main-wrapper > div > div.row.flex-grow-1 > main > article > div.content');
+
+        content.innerHTML = content.innerHTML.replaceAll(/\[\[\d{4}-\d{2}-\d{2}-(.+?)\|(.+?)\]\]/g, '<a href="../$1">$2</a>');
+        content.innerHTML = content.innerHTML.replaceAll(/\[\[\d{4}-\d{2}-\d{2}-(.+?)\]\]/g, '<a href="../$1">$1</a>');
+	})();
+</script>
